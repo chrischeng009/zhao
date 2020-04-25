@@ -110,12 +110,12 @@ class Merchant extends Controller
             echo "手机号已存在";exit;
         }
         
-      /**  if(empty($_SESSION['smscode']) || $_SESSION['smscode']!=postt('smscode')){
+       if(empty($_SESSION['smscode']) || $_SESSION['smscode']!=postt('smscode')){
             echo '短信验证码错误！';exit;
         }
         if(empty($_SESSION['smsexptime']) || time()>$_SESSION['smsexptime']){
             echo "短信验证码已过期！";exit;
-        }**/
+        }
 
         $data['mobile'] = postt('mobile');
         $data['mobile'] = postt('mobile');

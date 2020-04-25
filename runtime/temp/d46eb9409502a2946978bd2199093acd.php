@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:50:"./application/merchant/view/merchant/register.html";i:1586929884;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:50:"./application/merchant/view/merchant/register.html";i:1587805908;}*/ ?>
 <!DOCTYPE HTML>
 <html lang="zxx">
 <head>
@@ -49,7 +49,7 @@
             </label>
             <input type="text" name="mobile" placeholder="请输入手机号码" required="">
         </div>
-        <!--<div class="form-style-agile">
+		<div class="form-style-agile">
             <label style="width:100%;">
                 <i class="fas fa-user"></i>
                 短信验证
@@ -58,7 +58,7 @@
             <input type="button" style="padding: 15px 0; margin-top: 0" value="获取验证码" class="send-button js-send-phone-code" id="send">
             <input type="button"  value="发送中..." class="send-button js-send-phone-code" id="send2" style="display:none;padding: 15px 0;margin-top: 0">
             <span class="error-mes show-after-input"></span>
-        </div>-->
+        </div>
         <div class="form-style-agile">
             <label>
                 <i class="fas fa-unlock-alt"></i>
