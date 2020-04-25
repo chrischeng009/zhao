@@ -58,7 +58,7 @@ class Merchant extends Controller
     }
     public function act_send_register()
     {
-        $mobile = postt('mobile');
+        $mobile = postt('phone');
         $count = MerchantModel::count("and mobile='".$mobile."'");
         if($count>=1){
             echo "手机号已存在！";exit;
@@ -275,6 +275,7 @@ class Merchant extends Controller
     }
     public function act_login()
     {
+    
         $mobile = postt('mobile');
         $password = md5(trim($_POST['password']));
         $find = MerchantModel::find("and mobile='".$mobile."' and password='".$password."'");

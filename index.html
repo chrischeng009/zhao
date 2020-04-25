@@ -31,7 +31,8 @@
 
         </div>
     </div>
-    <style type="text/css">
+    <style type="text/css"> 
+         #myDIV{margin:right;text-clolor:yellow;text-decoration: underline;text-decoration-color:yellow;}
         .myloginmask {position:fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: black;display: none;opacity: 0.7;z-index: 800;filter:alpha(opacity=70)}
         .mylogin {position:   fixed;top: 50%;left: 50%;margin-top: -346px;margin-left: -260px;width: 520px;height: 496px;background-image: url("statics/home2/images/login/login_info.png");background-repeat: no-repeat;z-index: 1000;display: none;}
         .mylogin .topcontent {font-weight:bold;text-align: center;color: #666666;font-size: 18px;padding-top: 284px;line-height: 36px;}
@@ -141,7 +142,7 @@
     $(function(){
         $('#account,#redbag,#percentage,#message,#m2-commonRight').click(function(){
             $('html, body').animate({scrollTop:0}, 'slow');
-            $("#user_name").focus();
+            $("#mobile").focus();
         })
     })
 
@@ -390,11 +391,11 @@
         <!-- 登录start -->
         <div class="mo2-indLogboxRight">
             <div class="mo2-indLogitem mo2-indLogitem-use" style="margin-bottom:9px;">
-                <i class="mo2-indLogicon-use"></i><input class="mo2-indIpt-all" type="text" id="user_nameRight" placeholder="用户名/手机号">
+                <i class="mo2-indLogicon-use"></i><input class="mo2-indIpt-all" type="text" id="mobileRight" placeholder="用户名/手机号">
                 <b class="mo2-indLogwar" id="w_username"><em class="mo2-indlogWar-arr"></em><u id="r_usernameRight"></u></b>
             </div>
             <div class="mo2-indLogitem mo2-indLogitem-psw" style="margin-bottom:9px;">
-                <i class="mo2-indLogicon-psw"></i><input class="mo2-indIpt-all m2-ind-banPsw" maxlength="20" id="pass_wordRight" type="password" id="pass_wordRight" placeholder="输入登录密码">
+                <i class="mo2-indLogicon-psw"></i><input class="mo2-indIpt-all m2-ind-banPsw" maxlength="20" id="passwordRight" type="password" id="passwordRight" placeholder="输入登录密码">
                 <b class="mo2-indLogwar" id="w_password"><em class="mo2-indlogWar-arr"></em><u id="r_passwordRight"></u></b>
             </div>
             <div class="mo2-indLog-code" style="display:none;margin-bottom:8px;">
@@ -633,19 +634,19 @@
     }
     //登录方法
     function loginRight(){
-        var p = makevar(['user_nameRight','pass_wordRight','vcodeRight']);
+        var p = makevar(['mobileRight','passwordRight','vcodeRight']);
         var canSubmit = true;
-        if($('#user_nameRight').val()==""){
+        if($('#mobileRight').val()==""){
             $('#r_usernameRight').html('用户名不能为空！');
             $('#w_usernameRight').show();
-        }else if($('#user_nameRight').val().lenght <6){
+        }else if($('#mobileRight').val().lenght <6){
             $('#r_usernameRight').html('用户名长度错误！');
             $('#w_usernameRight').show();
         }else {
-            if ($('#pass_wordRight').val() == ""){
+            if ($('#passwordRight').val() == ""){
                 $('#r_passwordRight').html('密码不能为空！');
                 $('#w_passwordRight').show();
-            }else if ($('#pass_wordRight').val().length < 6 || $('#pass_wordRight').val().length > 20){
+            }else if ($('#passwordRight').val().length < 6 || $('#passwordRight').val().length > 20){
                 $('#r_passwordRight').html('密码长度错误！');
                 $('#w_passwordRight').show();
             }else {
@@ -778,7 +779,7 @@
                 <ul>
                     <!-- 论坛导航栏全部关闭 -->
                     <!--<li class="m2-commonTop-btn" style="display: none" id="bbs"><a id="bbslogin" target="_blank">论坛</a></li>-->
-                    <li class="m2-commonTop-btn"><a href="register.html" target="_blank">注册</a></li>
+                    <li class="m2-commonTop-btn"><a href="/home.php/merchant/merchant/register.html" target="_blank">注册</a></li>
                     <li class="m2-commonTop-btn"><a href="login.html#login_callback=/index" target="_blank" style="border-right:none;">登录</a></li>
                     <li class="m2-commonTop-btn"><a href="company_finance.html" id="cfpage" style="border-right:none;width: 50px;">企业理财</a></li>                </ul>
             </div>
@@ -895,9 +896,9 @@
             <!-- 登录注册start -->
             <div class="mo2-indLogreg" >				<div class="mo2-indLogtab">
                 <ul>
-                    <li class="mo2-logTab-unsel mo2-indTab-reg">
+                   <!--  <li class="mo2-logTab-unsel mo2-indTab-reg">
                         <span>注册</span><b></b>
-                    </li>
+                    </li> -->
                     <li class="mo2-logTab-sel mo2-indTab-log">
                         <span>登录</span><b></b>
                     </li>
@@ -951,11 +952,11 @@
                 <!-- 登录start -->
                 <div class="mo2-indLogbox">
                     <div class="mo2-indLogitem mo2-indLogitem-use" style="margin-bottom:9px;">
-                        <i class="mo2-indLogicon-use"></i><input class="mo2-indIpt-all" type="text" id="user_name" placeholder="用户名/手机号">
+                        <i class="mo2-indLogicon-use"></i><input class="mo2-indIpt-all" type="text" id="mobile" placeholder="用户名/手机号">
                         <b class="mo2-indLogwar" id="w_usernameMain"><em class="mo2-indlogWar-arr"></em><u id="r_usernameMain"></u></b>
                     </div>
                     <div class="mo2-indLogitem mo2-indLogitem-psw" style="margin-bottom:9px;">
-                        <i class="mo2-indLogicon-psw"></i><input class="mo2-indIpt-all m2-ind-banPsw" maxlength="20" id="pass_word" type="password" id="pass_word" placeholder="输入登录密码">
+                        <i class="mo2-indLogicon-psw"></i><input class="mo2-indIpt-all m2-ind-banPsw" maxlength="20" id="password" type="password" id="password" placeholder="输入登录密码">
                         <b class="mo2-indLogwar" id="w_passwordMain"><em class="mo2-indlogWar-arr"></em><u id="r_passwordMain"></u></b>
                     </div>
                     <div class="mo2-indLog-code" style="display:none;margin-bottom:8px;">
@@ -964,7 +965,7 @@
                             <input type="text" id="vcode" placeholder="验证码"></div>
                         <div class="mo2-indLogcod-rig"><img src="Index-VerifyCode.png" onClick="document.getElementById('reverifyCode').src='Index-VerifyCode.png?time='+Math.random();void(0);" alt="点击刷新验证码"></div>
                     </div>
-                    <div class="mo2-indLog-forget"><a href="forget.html">忘记密码?</a></div>
+                    <div class="mo2-indLog-forget"><a href="forget.html">没有账号?</a><a class="mo2-indRegbtn-able" href="#">立即注册</a></div>
                     <div class="mo2-indReg-btn" style="margin-top: 20px;">
                         <a class="mo2-indRegbtn-able" onclick="login();">登录</a>
                     </div>
@@ -1048,7 +1049,7 @@
 <script type="text/javascript">
 
     $(function(){
-        $("#user_name").focus();
+        $("#mobile").focus();
         //隐藏弹窗(体验金弹框)
         $("#newregister-close").click(function(){
             $("#newregister").hide();
@@ -7277,7 +7278,7 @@
         window.open('thirdparty-oklink-oauth_getcode');
     }
 
-    $('#user_name').blur(function(){
+    $('#mobile').blur(function(){
         if ($(this).val().length > 0){
             if ($(this).val().lenght < 6){
                 $('#r_usernameMain').html('用户名长度错误');
@@ -7292,7 +7293,7 @@
         }
     });
 
-    $('#pass_word').blur(function(){
+    $('#password').blur(function(){
         if ($(this).val().length > 0){
             if ($(this).val().length < 6 || $(this).val().length >20){
                 $('#r_passwordMain').html('密码格式错误');
@@ -7304,19 +7305,19 @@
         }
     });
     function login(){
-        var p = makevar(['user_name','pass_word','vcode']);
+        var p = makevar(['mobile','password','vcode']);
         var canSubmit = true;
-        if($('#user_name').val()==""){
+        if($('#mobile').val()==""){
             $('#r_usernameMain').html('用户名不能为空');
             $('#w_usernameMain').show();
-        }else if($('#user_name').val().lenght <6){
+        }else if($('#mobile').val().lenght <6){
             $('#r_usernameMain').html('用户名长度错误');
             $('#w_usernameMain').show();
         }else {
-            if ($('#pass_word').val() == ""){
+            if ($('#password').val() == ""){
                 $('#r_passwordMain').html('密码不能为空');
                 $('#w_passwordMain').show();
-            }else if ($('#pass_word').val().length < 6 || $('#pass_word').val().length > 20){
+            }else if ($('#password').val().length < 6 || $('#password').val().length > 20){
                 $('#r_passwordMain').html('密码长度错误');
                 $('#w_passwordMain').show();
             }else {
@@ -7324,7 +7325,23 @@
                 $('#w_usernameMain').hide();
                 $('#r_passwordMain').html('');
                 $('#w_passwordMain').hide();
-                postData("/Home-Login-index_login",p,function(d){
+                 $.ajax({
+                     type:'POST',
+                     cache:false,
+                     url:'/home.php/merchant/merchant/act_login.html',
+                        dataType:'text',
+                        data:p,
+                        success:function(data)
+                      {
+                         if(data=='success'){
+                         window.location.href='/home.php/merchant/merchant/index.html';
+                         }else{
+                             alert(data);
+                        }
+                        }
+                 })
+                 
+              /*  postData("/home.php/merchant/merchant/act_login.html",p,function(d){
                     if(d.status==0){
                         $('#r_usernameMain').html(d.message);
                         $('#w_usernameMain').show();
@@ -7334,9 +7351,9 @@
                     }else if(d.status==1){
                         window.location.reload();
                     }else if(d.status==2){
-                        window.location.href = "dashiji_show.html#15319.html";
+                         window.location.href='/home.php/{$module}/{$control}/index.html';
                     }
-                });
+                });*/
             }
         }
     }
@@ -7355,7 +7372,7 @@
             if($(this).hasClass('m2-ind-banPsw')){
                 $(this).parents('.mo2-indLogitem').append('<span class="m2-ind-place" style="display:inline-block;position:absolute;color:#999;width:195px;height:40px;top:0;left:35px;line-height:40px;font-size:14px;z-index:5;padding-left:10px;"></span>');
                 $('#pass').siblings('.m2-ind-place').html('6-15位数字与字母组合的密码');
-                $('#pass_word').siblings('.m2-ind-place').html('输入登录密码');
+                $('#password').siblings('.m2-ind-place').html('输入登录密码');
 
                 $(this).siblings('.m2-ind-place').click(function(){
                     $(this).hide();
