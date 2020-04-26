@@ -766,44 +766,24 @@
 //		return false;
         }
         if(canSubmit!==true) return false;
-        postData("/Home-Login-login_new",p,function(d){
+         $.ajax({
+                     type:'POST',
+                     cache:false,
+                     url:'/home.php/merchant/merchant/act_login.html',
+                        dataType:'text',
+                        data:p,
+                        success:function(data)
+                      {
+                         if(data=='success'){
+                         window.location.href='/home.php/merchant/merchant/index.html';
+                         }else{
+                             alert(data);
+                        }
+                        }
+                 })
 
-//		  $(".alarmnew").hide();
-            d.url = decodeURIComponent(d.url);
-            if(d.status==3){
-                showInfoDialog(d.message,1);
-                setTimeout(function(){
-                    window.location.href=d.url;
-                },3000);
-            }else if(d.status==2){
-                showInfoDialog(d.comments,1);
-                setTimeout(function(){
-                    window.location.href=d.url;
-                },3000);
-            }else if(d.status==6){
-                window.location.reload();
-//			showLoginDialog(d.mycoin,1);
-            }else if(d.status==1){
-                showLoginInfoDialog(d.comments,1);
-                setTimeout(function(){
-                    window.location.href=d.url;
-                },3000);
-            }else if(d.status==5){
-                $(".alarmnew").html(d.message);
-//    $(".alarmnew").show();
-                if(d.verify_nums>3){
-                    $("#reverifyCode").click();
-                    codeShow();
-                }
-            }
-            else{
-                $(".alarmnew").html(d.message);
-//    $(".alarmnew").show();
-                if(d.verify_nums>3){
-                    $("#reverifyCode").click();
-                    codeShow();
-                }
-            }
+
+        
         });
     }
     function oklinklogin(){

@@ -58,7 +58,7 @@ class Merchant extends Controller
     }
     public function act_send_register()
     {
-        $mobile = postt('mobile');
+        $mobile = postt('phone');
         $count = MerchantModel::count("and mobile='".$mobile."'");
         if($count>=1){
             echo "手机号已存在！";exit;
@@ -105,11 +105,12 @@ class Merchant extends Controller
     }
     public function act_register()
     {
+
         $count = MerchantModel::count("and mobile='".postt('mobile')."'");
         if($count>0){
             echo "手机号已存在";exit;
         }
-        
+
        if(empty($_SESSION['smscode']) || $_SESSION['smscode']!=postt('smscode')){
             echo '短信验证码错误！';exit;
         }
@@ -117,7 +118,6 @@ class Merchant extends Controller
             echo "短信验证码已过期！";exit;
         }
 
-        $data['mobile'] = postt('mobile');
         $data['mobile'] = postt('mobile');
         $data['password'] = md5(trim($_POST['password']));
         $data['weixin'] = postt('weixin');
@@ -134,6 +134,8 @@ class Merchant extends Controller
         }*/
         $data['worktime'] = $find_config['worktime'];
         $data['worknum'] = $find_config['worknum'];
+        
+
         $result = MerchantModel::do_add($data);
         if($result){
             echo 'success';
@@ -275,6 +277,7 @@ class Merchant extends Controller
     }
     public function act_login()
     {
+
         $mobile = postt('mobile');
         $password = md5(trim($_POST['password']));
         $find = MerchantModel::find("and mobile='".$mobile."' and password='".$password."'");
