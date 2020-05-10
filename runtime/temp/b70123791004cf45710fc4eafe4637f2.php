@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:43:"./application/merchant/view/shop/lists.html";i:1586928866;s:64:"/www/wwwroot/nouser/application/merchant/view/common/header.html";i:1586928869;s:62:"/www/wwwroot/nouser/application/merchant/view/common/menu.html";i:1586928869;s:64:"/www/wwwroot/nouser/application/merchant/view/common/footer.html";i:1586928869;s:59:"/www/wwwroot/nouser/application/merchant/view/shop/add.html";i:1586928865;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:43:"./application/merchant/view/shop/lists.html";i:1588041421;s:64:"/www/wwwroot/nouser/application/merchant/view/common/header.html";i:1586928869;s:62:"/www/wwwroot/nouser/application/merchant/view/common/menu.html";i:1586928869;s:64:"/www/wwwroot/nouser/application/merchant/view/common/footer.html";i:1586928869;s:59:"/www/wwwroot/nouser/application/merchant/view/shop/add.html";i:1586928865;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -174,7 +174,7 @@
                         <?php if( $v['status']==1){?>
                         <a href="/home.php/<?php echo $module; ?>/<?php echo $control; ?>/edit.html?id=<?php echo $v['id']; ?>"><span class="label label-primary">编辑</span></a>
                          <?php }?>
-                        <a href="javascript:;" onclick="act_del(<?php echo $v['id']; ?>)"><span class="label label-danger">删除</span></a>
+                      <!--  <a href="javascript:;" onclick="act_del(<?php echo $v['id']; ?>)"><span class="label label-danger">删除</span></a>-->
                     </td>
                 </tr>
                 <?php }?>

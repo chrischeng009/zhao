@@ -1,0 +1,2017 @@
+---------------------------------------------------------------
+[ 2020-05-02T22:33:20+08:00 ] 120.239.112.148 GET /home.php/merchant/merchant/login.html
+[ info ] b.8861.com/home.php/merchant/merchant/login.html [运行时间：0.017561s][吞吐率：56.94req/s] [内存消耗：2,195.14kb] [文件加载：42]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'b.8861.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3722.400 QQBrowser/10.5.3751.400',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://b.8861.com/home.php/admin/order/bindlist.html?shop_name=&mobile=&status1=&wangwang=&verifycode=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=tka67d6p97kvtjnjfivon1r2e1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\merchant\controller\Merchant->login[ /www/wwwroot/nouser/application/merchant/controller/Merchant.php ]
+[ info ] [ VIEW ] ./application/merchant/view/merchant/login.html [ array (
+  0 => 'module',
+  1 => 'control',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T22:33:23+08:00 ] 120.239.112.148 POST /home.php/admin/order/act_edit_finish.html
+[ info ] b.8861.com/home.php/admin/order/act_edit_finish.html [运行时间：0.053622s][吞吐率：18.65req/s] [内存消耗：4,891.57kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'act_edit_finish',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'b.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://b.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3722.400 QQBrowser/10.5.3751.400',
+  'referer' => 'http://b.8861.com/home.php/admin/order/bindlist.html?shop_name=&mobile=&status1=&wangwang=&verifycode=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=tka67d6p97kvtjnjfivon1r2e1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '7',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3196',
+)
+[ info ] [ RUN ] app\admin\controller\Order->act_edit_finish[ /www/wwwroot/nouser/application/admin/controller/Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000323s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000896s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  1=1 and id=3196 ) ORDER BY id desc LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  (  1=1 and id=29 ) LIMIT 1 [ RunTime:0.000238s ]
+[ sql ] [ SQL ] UPDATE `admin`  SET `money`=-1595  WHERE  (  1=1 and id=29 ) [ RunTime:0.003520s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `adminmlogs` [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT * FROM `adminmlogs` WHERE  (  1=1   and intime>=1588348800 and intime<=1588435199 and admin_id=29 and order_code=955379  ) ORDER BY id desc LIMIT 1 [ RunTime:0.000501s ]
+[ sql ] [ SQL ] INSERT INTO `adminmlogs` (`algorithm` , `type` , `admin_id` , `shop_id` , `money` , `order_code` , `tradeno` , `startmoney` , `endmoney` , `remark` , `intime` , `uptime`) VALUES (2 , 2 , 29 , 35 , 32 , '955379' , '' , -1563 , -1595 , '任务编号：955379，已结算扣除实际下单价：28.00，佣金：4.00，总金额：32' , 1588430003 , 1588430003) [ RunTime:0.002003s ]
+[ sql ] [ SQL ] UPDATE `order`  SET `status1`=4,`finishtime`=1588430003  WHERE  (  1=1 and id=3196 ) [ RunTime:0.001795s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shop` [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SELECT * FROM `shop` WHERE  (  1=1 and id=35 ) ORDER BY id asc LIMIT 1 [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ordershop` [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT * FROM `ordershop` WHERE  (  1=1  and shop_wangwang='lihongjiao7100' and shop_id='35' ) LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] INSERT INTO `ordershop` (`user_id` , `shop_id` , `shop_name` , `shop_wangwang` , `intime` , `uptime`) VALUES (NULL , 35 , '鸿鹄水晶定制' , '鸿鹄水晶定制' , 1588430003 , 1588430003) [ RunTime:0.002338s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchant` [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT * FROM `merchant` WHERE  (  1=1 and id=16 ) LIMIT 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchantwithout` [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=16 and start<=28.00 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=16 and start<=28.00 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] UPDATE `merchant`  SET `money`=0  WHERE  (  1=1 and id=16 ) [ RunTime:0.001987s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `task` [ RunTime:0.000590s ]
+[ sql ] [ SQL ] SELECT * FROM `task` WHERE  (  1=1 and id=45 ) ORDER BY id desc LIMIT 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1 and task_id=45 and status1=4 ) LIMIT 1 [ RunTime:0.000911s ]
+[ sql ] [ SQL ] UPDATE `task`  SET `status`=6,`uptime`=1588430003  WHERE  (  1=1 and id='45' ) [ RunTime:0.002010s ]
+---------------------------------------------------------------
+[ 2020-05-02T22:33:25+08:00 ] 120.239.112.148 GET /home.php/admin/order/bindlist.html?shop_name=&mobile=&status1=&wangwang=&verifycode=
+[ info ] b.8861.com/home.php/admin/order/bindlist.html?shop_name=&mobile=&status1=&wangwang=&verifycode= [运行时间：0.070279s][吞吐率：14.23req/s] [内存消耗：4,979.89kb] [文件加载：61]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'bindlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'b.8861.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3722.400 QQBrowser/10.5.3751.400',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://b.8861.com/home.php/admin/order/bindlist.html?shop_name=&mobile=&status1=&wangwang=&verifycode=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=tka67d6p97kvtjnjfivon1r2e1',
+)
+[ info ] [ PARAM ] array (
+  'shop_name' => '',
+  'mobile' => '',
+  'status1' => '',
+  'wangwang' => '',
+  'verifycode' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Order->bindlist[ /www/wwwroot/nouser/application/admin/controller/Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./application/admin/view/order/bindlist.html [ array (
+  0 => 'count1',
+  1 => 'count2',
+  2 => 'count3',
+  3 => 'count4',
+  4 => 'tkcount',
+  5 => 'page_show',
+  6 => 'lists',
+  7 => 'server_list',
+  8 => 'kefu',
+  9 => 'hourordernum',
+  10 => 'paiming',
+  11 => 'zongshu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000261s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000824s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` `a` INNER JOIN `task` `b` ON `b`.`id`=`a`.`task_id` WHERE  (  1=1  and a.intime>=1588348800 and a.intime<=1588435199 and b.status =3 and a.worktype=1 and a.aid=0 ) LIMIT 1 [ RunTime:0.001122s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and worktime >= '1588348800' and worktime <= '1588521599' and aid=29 and type=1 and status1 in(2,3) ) LIMIT 1 [ RunTime:0.001011s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and worktime >= '1588348800' and worktime <= '1588521599' and aid=29 and type=1 and status1 in(4) ) LIMIT 1 [ RunTime:0.000937s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and worktime >= '1588348800' and worktime <= '1588521599' and aid=29 and type in(3) ) LIMIT 1 [ RunTime:0.000887s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and finishtime >= '1588348800' and finishtime <= '1588521599' and aid=29 and type=2 and status1=4 ) LIMIT 1 [ RunTime:0.000939s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and worktime >= '1588348800' and worktime <= '1588521599' and aid=29 and type=1 and status1 in(1,2,3,6) ) LIMIT 1 [ RunTime:0.000991s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  1=1  and worktime >= '1588348800' and worktime <= '1588521599' and aid=29 and type=1 and status1 in(1,2,3,6) ) ORDER BY status1 desc,aidtime asc LIMIT 0,10 [ RunTime:0.001314s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.000633s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  (  isdel=1 and role_id=2 ) ORDER BY id desc [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SELECT `a`.*,( SELECT count(b.id) FROM `order` `b` WHERE  (  b.aid=a.id  and b.finishtime>=1588348800 and b.finishtime<=1588435199 and status1=4 and type=1 ) ) as ordernum FROM `admin` `a` WHERE  (  1=1 and role_id=2 ) ORDER BY ordernum desc LIMIT 0,3 [ RunTime:0.013842s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.000633s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  (  1=1  ) LIMIT 1 [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hongbao` [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SELECT SUM(orprice) AS tp_sum FROM `hongbao` WHERE  (  admin_id=29  and intime >= '1588348800' and intime <= '1588435199' ) LIMIT 1 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT `money` FROM `admin` WHERE  (  id=29 ) LIMIT 1 [ RunTime:0.000129s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `menu` [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and control='order' and action='bindlist' ) LIMIT 1 [ RunTime:0.000201s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  (  1=1 and id='29' ) LIMIT 1 [ RunTime:0.000174s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (   type=2 and status2=1 and exceptioninfo !='申请下架'  and aid='29' ) LIMIT 1 [ RunTime:0.000930s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (   type=2 and status2=1 and exceptioninfo ='申请下架'  and aid='29' ) LIMIT 1 [ RunTime:0.001009s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (   type=3 and status3=1 and exceptioninfo !='申请下架'  and aid='29' ) LIMIT 1 [ RunTime:0.000961s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (   type in (1,3) and iscomment=2  and aid='29' ) LIMIT 1 [ RunTime:0.000915s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and pid=0 ) ORDER BY sort asc,name asc [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and control='order' and action='bindlist' ) LIMIT 1 [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and isshow=1 and pid=1 ) ORDER BY sort asc,name asc [ RunTime:0.000200s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and control='order' and action='bindlist' ) LIMIT 1 [ RunTime:0.000176s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and isshow=1 and pid=2 ) ORDER BY sort asc,name asc [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and control='order' and action='bindlist' ) LIMIT 1 [ RunTime:0.000170s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and isshow=1 and pid=3 ) ORDER BY sort asc,name asc [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and control='order' and action='bindlist' ) LIMIT 1 [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and isshow=1 and pid=4 ) ORDER BY sort asc,name asc [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and control='order' and action='bindlist' ) LIMIT 1 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and isshow=1 and pid=6 ) ORDER BY sort asc,name asc [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and control='order' and action='bindlist' ) LIMIT 1 [ RunTime:0.000174s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and isshow=1 and pid=5 ) ORDER BY sort asc,name asc [ RunTime:0.000182s ]
+---------------------------------------------------------------
+[ 2020-05-02T22:33:29+08:00 ] 120.239.112.148 GET /home.php/merchant/merchant/login.html
+[ info ] b.8861.com/home.php/merchant/merchant/login.html [运行时间：0.017555s][吞吐率：56.96req/s] [内存消耗：2,194.81kb] [文件加载：42]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'b.8861.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3722.400 QQBrowser/10.5.3751.400',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://b.8861.com/home.php/admin/order/bindlist.html?shop_name=&mobile=&status1=&wangwang=&verifycode=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=tka67d6p97kvtjnjfivon1r2e1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\merchant\controller\Merchant->login[ /www/wwwroot/nouser/application/merchant/controller/Merchant.php ]
+[ info ] [ VIEW ] ./application/merchant/view/merchant/login.html [ array (
+  0 => 'module',
+  1 => 'control',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T22:33:32+08:00 ] 120.239.112.148 POST /home.php/admin/order/act_pull.html
+[ info ] b.8861.com/home.php/admin/order/act_pull.html [运行时间：0.036165s][吞吐率：27.65req/s] [内存消耗：4,702.15kb] [文件加载：60]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'act_pull',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'b.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://b.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3722.400 QQBrowser/10.5.3751.400',
+  'referer' => 'http://b.8861.com/home.php/admin/order/bindlist.html?shop_name=&mobile=&status1=&wangwang=&verifycode=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=tka67d6p97kvtjnjfivon1r2e1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '5',
+)
+[ info ] [ PARAM ] array (
+  'cid' => '1',
+)
+[ info ] [ RUN ] app\admin\controller\Order->act_pull[ /www/wwwroot/nouser/application/admin/controller/Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000332s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.000751s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  (  isdel=1 and iswork=2 ) ORDER BY id desc [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000718s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and aid=29 and type=1 and status1 in(2,3)  and aidtime >= '1588348800' and aidtime <= '1588435199' ) LIMIT 1 [ RunTime:0.001297s ]
+[ error ] [2]file_put_contents(/www/wwwroot/nouser/runtime/cache/9f/d3820ed286969efd1cd3a38af6e926.php): failed to open stream: Permission denied[/www/wwwroot/nouser/thinkphp/library/think/cache/driver/File.php:159]
+---------------------------------------------------------------
+[ 2020-05-02T22:40:01+08:00 ] 39.100.2.104 GET /home.php/commang/Index/act_jisuan
+[ info ] b.8861.com/home.php/commang/Index/act_jisuan [运行时间：0.044458s][吞吐率：22.49req/s] [内存消耗：4,450.47kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'commang',
+    1 => 'Index',
+    2 => 'act_jisuan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'b.8861.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\commang\controller\Index->act_jisuan[ /www/wwwroot/nouser/application/commang/controller/Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000347s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `task` [ RunTime:0.000760s ]
+[ sql ] [ SQL ] SELECT * FROM `task` WHERE  (  1=1  and status=3 and worktime >= '1588348800' and worktime <= '1588435199' and worktype=1 ) ORDER BY istime desc,id desc lock in share mode [ RunTime:0.000493s ]
+[ error ] [2]file_put_contents(/www/wwwroot/nouser/runtime/cache/9f/d3820ed286969efd1cd3a38af6e926.php): failed to open stream: Permission denied[/www/wwwroot/nouser/thinkphp/library/think/cache/driver/File.php:159]
+---------------------------------------------------------------
+[ 2020-05-02T22:47:28+08:00 ] 120.239.112.148 GET /home.php/admin/order/bindlist.html?shop_name=&mobile=&status1=&wangwang=&verifycode=
+[ info ] b.8861.com/home.php/admin/order/bindlist.html?shop_name=&mobile=&status1=&wangwang=&verifycode= [运行时间：0.072085s][吞吐率：13.87req/s] [内存消耗：4,979.53kb] [文件加载：61]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'bindlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'b.8861.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3722.400 QQBrowser/10.5.3751.400',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://b.8861.com/home.php/admin/order/bindlist.html?shop_name=&mobile=&status1=&wangwang=&verifycode=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=tka67d6p97kvtjnjfivon1r2e1',
+)
+[ info ] [ PARAM ] array (
+  'shop_name' => '',
+  'mobile' => '',
+  'status1' => '',
+  'wangwang' => '',
+  'verifycode' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Order->bindlist[ /www/wwwroot/nouser/application/admin/controller/Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./application/admin/view/order/bindlist.html [ array (
+  0 => 'count1',
+  1 => 'count2',
+  2 => 'count3',
+  3 => 'count4',
+  4 => 'tkcount',
+  5 => 'page_show',
+  6 => 'lists',
+  7 => 'server_list',
+  8 => 'kefu',
+  9 => 'hourordernum',
+  10 => 'paiming',
+  11 => 'zongshu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000303s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.001038s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` `a` INNER JOIN `task` `b` ON `b`.`id`=`a`.`task_id` WHERE  (  1=1  and a.intime>=1588348800 and a.intime<=1588435199 and b.status =3 and a.worktype=1 and a.aid=0 ) LIMIT 1 [ RunTime:0.001239s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and worktime >= '1588348800' and worktime <= '1588521599' and aid=29 and type=1 and status1 in(2,3) ) LIMIT 1 [ RunTime:0.001604s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and worktime >= '1588348800' and worktime <= '1588521599' and aid=29 and type=1 and status1 in(4) ) LIMIT 1 [ RunTime:0.001083s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and worktime >= '1588348800' and worktime <= '1588521599' and aid=29 and type in(3) ) LIMIT 1 [ RunTime:0.000961s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and finishtime >= '1588348800' and finishtime <= '1588521599' and aid=29 and type=2 and status1=4 ) LIMIT 1 [ RunTime:0.001003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and worktime >= '1588348800' and worktime <= '1588521599' and aid=29 and type=1 and status1 in(1,2,3,6) ) LIMIT 1 [ RunTime:0.001011s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  (  1=1  and worktime >= '1588348800' and worktime <= '1588521599' and aid=29 and type=1 and status1 in(1,2,3,6) ) ORDER BY status1 desc,aidtime asc LIMIT 0,10 [ RunTime:0.001417s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.000687s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  (  isdel=1 and role_id=2 ) ORDER BY id desc [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT `a`.*,( SELECT count(b.id) FROM `order` `b` WHERE  (  b.aid=a.id  and b.finishtime>=1588348800 and b.finishtime<=1588435199 and status1=4 and type=1 ) ) as ordernum FROM `admin` `a` WHERE  (  1=1 and role_id=2 ) ORDER BY ordernum desc LIMIT 0,3 [ RunTime:0.013029s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  (  1=1  ) LIMIT 1 [ RunTime:0.000229s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hongbao` [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SELECT SUM(orprice) AS tp_sum FROM `hongbao` WHERE  (  admin_id=29  and intime >= '1588348800' and intime <= '1588435199' ) LIMIT 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT `money` FROM `admin` WHERE  (  id=29 ) LIMIT 1 [ RunTime:0.000151s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `menu` [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and control='order' and action='bindlist' ) LIMIT 1 [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  (  1=1 and id='29' ) LIMIT 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (   type=2 and status2=1 and exceptioninfo !='申请下架'  and aid='29' ) LIMIT 1 [ RunTime:0.001049s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (   type=2 and status2=1 and exceptioninfo ='申请下架'  and aid='29' ) LIMIT 1 [ RunTime:0.001079s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (   type=3 and status3=1 and exceptioninfo !='申请下架'  and aid='29' ) LIMIT 1 [ RunTime:0.001040s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (   type in (1,3) and iscomment=2  and aid='29' ) LIMIT 1 [ RunTime:0.000875s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and pid=0 ) ORDER BY sort asc,name asc [ RunTime:0.000276s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and control='order' and action='bindlist' ) LIMIT 1 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and isshow=1 and pid=1 ) ORDER BY sort asc,name asc [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and control='order' and action='bindlist' ) LIMIT 1 [ RunTime:0.000177s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and isshow=1 and pid=2 ) ORDER BY sort asc,name asc [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and control='order' and action='bindlist' ) LIMIT 1 [ RunTime:0.000170s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and isshow=1 and pid=3 ) ORDER BY sort asc,name asc [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and control='order' and action='bindlist' ) LIMIT 1 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and isshow=1 and pid=4 ) ORDER BY sort asc,name asc [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and control='order' and action='bindlist' ) LIMIT 1 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and isshow=1 and pid=6 ) ORDER BY sort asc,name asc [ RunTime:0.000175s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and control='order' and action='bindlist' ) LIMIT 1 [ RunTime:0.000168s ]
+[ sql ] [ SQL ] SELECT * FROM `menu` WHERE  (  1=1 and isshow=1 and pid=5 ) ORDER BY sort asc,name asc [ RunTime:0.000185s ]
+---------------------------------------------------------------
+[ 2020-05-02T22:47:29+08:00 ] 120.239.112.148 GET /home.php/merchant/merchant/login.html
+[ info ] b.8861.com/home.php/merchant/merchant/login.html [运行时间：0.016867s][吞吐率：59.29req/s] [内存消耗：2,194.81kb] [文件加载：42]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'b.8861.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3722.400 QQBrowser/10.5.3751.400',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://b.8861.com/home.php/admin/order/bindlist.html?shop_name=&mobile=&status1=&wangwang=&verifycode=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=tka67d6p97kvtjnjfivon1r2e1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\merchant\controller\Merchant->login[ /www/wwwroot/nouser/application/merchant/controller/Merchant.php ]
+[ info ] [ VIEW ] ./application/merchant/view/merchant/login.html [ array (
+  0 => 'module',
+  1 => 'control',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T22:50:01+08:00 ] 39.100.2.104 GET /home.php/commang/Index/act_jisuan
+[ info ] b.8861.com/home.php/commang/Index/act_jisuan [运行时间：0.033498s][吞吐率：29.85req/s] [内存消耗：4,450.47kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'commang',
+    1 => 'Index',
+    2 => 'act_jisuan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'b.8861.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\commang\controller\Index->act_jisuan[ /www/wwwroot/nouser/application/commang/controller/Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000295s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `task` [ RunTime:0.000819s ]
+[ sql ] [ SQL ] SELECT * FROM `task` WHERE  (  1=1  and status=3 and worktime >= '1588348800' and worktime <= '1588435199' and worktype=1 ) ORDER BY istime desc,id desc lock in share mode [ RunTime:0.000460s ]
+[ error ] [2]file_put_contents(/www/wwwroot/nouser/runtime/cache/9f/d3820ed286969efd1cd3a38af6e926.php): failed to open stream: Permission denied[/www/wwwroot/nouser/thinkphp/library/think/cache/driver/File.php:159]
+---------------------------------------------------------------
+[ 2020-05-02T22:50:39+08:00 ] 113.77.136.78 GET /home.php/merchant/merchant/login.html
+[ info ] www.8861.com/home.php/merchant/merchant/login.html [运行时间：0.017309s][吞吐率：57.77req/s] [内存消耗：2,192.38kb] [文件加载：42]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\merchant\controller\Merchant->login[ /www/wwwroot/nouser/application/merchant/controller/Merchant.php ]
+[ info ] [ VIEW ] ./application/merchant/view/merchant/login.html [ array (
+  0 => 'module',
+  1 => 'control',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T23:00:02+08:00 ] 39.100.2.104 GET /home.php/commang/Index/act_jisuan
+[ info ] b.8861.com/home.php/commang/Index/act_jisuan [运行时间：0.043411s][吞吐率：23.04req/s] [内存消耗：4,450.47kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'commang',
+    1 => 'Index',
+    2 => 'act_jisuan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'b.8861.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\commang\controller\Index->act_jisuan[ /www/wwwroot/nouser/application/commang/controller/Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000324s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `task` [ RunTime:0.000935s ]
+[ sql ] [ SQL ] SELECT * FROM `task` WHERE  (  1=1  and status=3 and worktime >= '1588348800' and worktime <= '1588435199' and worktype=1 ) ORDER BY istime desc,id desc lock in share mode [ RunTime:0.000497s ]
+[ error ] [2]file_put_contents(/www/wwwroot/nouser/runtime/cache/9f/d3820ed286969efd1cd3a38af6e926.php): failed to open stream: Permission denied[/www/wwwroot/nouser/thinkphp/library/think/cache/driver/File.php:159]
+---------------------------------------------------------------
+[ 2020-05-02T23:05:38+08:00 ] 123.126.113.248 GET /home.php/merchant/merchant/login.html
+[ info ] www.8861.com/home.php/merchant/merchant/login.html [运行时间：0.016611s][吞吐率：60.20req/s] [内存消耗：2,191.95kb] [文件加载：42]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'host' => 'www.8861.com',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip,deflate',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\merchant\controller\Merchant->login[ /www/wwwroot/nouser/application/merchant/controller/Merchant.php ]
+[ info ] [ VIEW ] ./application/merchant/view/merchant/login.html [ array (
+  0 => 'module',
+  1 => 'control',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T23:05:39+08:00 ] 123.126.113.248 GET /home.php/merchant/merchant/login.html
+[ info ] www.8861.com/home.php/merchant/merchant/login.html [运行时间：0.017095s][吞吐率：58.50req/s] [内存消耗：2,192.09kb] [文件加载：42]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'host' => 'www.8861.com',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'PHPSESSID=krq019k90u8nmr06jn72sftqs7',
+  'accept-encoding' => 'gzip,deflate',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\merchant\controller\Merchant->login[ /www/wwwroot/nouser/application/merchant/controller/Merchant.php ]
+[ info ] [ VIEW ] ./application/merchant/view/merchant/login.html [ array (
+  0 => 'module',
+  1 => 'control',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T23:10:01+08:00 ] 39.100.2.104 GET /home.php/commang/Index/act_jisuan
+[ info ] b.8861.com/home.php/commang/Index/act_jisuan [运行时间：0.030225s][吞吐率：33.09req/s] [内存消耗：4,450.47kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'commang',
+    1 => 'Index',
+    2 => 'act_jisuan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'b.8861.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\commang\controller\Index->act_jisuan[ /www/wwwroot/nouser/application/commang/controller/Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000296s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `task` [ RunTime:0.000743s ]
+[ sql ] [ SQL ] SELECT * FROM `task` WHERE  (  1=1  and status=3 and worktime >= '1588348800' and worktime <= '1588435199' and worktype=1 ) ORDER BY istime desc,id desc lock in share mode [ RunTime:0.000394s ]
+[ error ] [2]file_put_contents(/www/wwwroot/nouser/runtime/cache/9f/d3820ed286969efd1cd3a38af6e926.php): failed to open stream: Permission denied[/www/wwwroot/nouser/thinkphp/library/think/cache/driver/File.php:159]
+---------------------------------------------------------------
+[ 2020-05-02T23:14:26+08:00 ] 117.26.68.92 GET /home.php/merchant/merchant/login.html
+[ info ] www.8861.com/home.php/merchant/merchant/login.html [运行时间：0.016060s][吞吐率：62.27req/s] [内存消耗：2,192.30kb] [文件加载：42]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=gda1ofhkledd5j70d6h9c2u561',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\merchant\controller\Merchant->login[ /www/wwwroot/nouser/application/merchant/controller/Merchant.php ]
+[ info ] [ VIEW ] ./application/merchant/view/merchant/login.html [ array (
+  0 => 'module',
+  1 => 'control',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T23:20:01+08:00 ] 39.100.2.104 GET /home.php/commang/Index/act_jisuan
+[ info ] b.8861.com/home.php/commang/Index/act_jisuan [运行时间：0.030682s][吞吐率：32.59req/s] [内存消耗：4,450.47kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'commang',
+    1 => 'Index',
+    2 => 'act_jisuan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'b.8861.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\commang\controller\Index->act_jisuan[ /www/wwwroot/nouser/application/commang/controller/Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000294s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `task` [ RunTime:0.000745s ]
+[ sql ] [ SQL ] SELECT * FROM `task` WHERE  (  1=1  and status=3 and worktime >= '1588348800' and worktime <= '1588435199' and worktype=1 ) ORDER BY istime desc,id desc lock in share mode [ RunTime:0.000389s ]
+[ error ] [2]file_put_contents(/www/wwwroot/nouser/runtime/cache/9f/d3820ed286969efd1cd3a38af6e926.php): failed to open stream: Permission denied[/www/wwwroot/nouser/thinkphp/library/think/cache/driver/File.php:159]
+---------------------------------------------------------------
+[ 2020-05-02T23:30:01+08:00 ] 39.100.2.104 GET /home.php/commang/Index/act_jisuan
+[ info ] b.8861.com/home.php/commang/Index/act_jisuan [运行时间：0.030049s][吞吐率：33.28req/s] [内存消耗：4,450.47kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'commang',
+    1 => 'Index',
+    2 => 'act_jisuan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'b.8861.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\commang\controller\Index->act_jisuan[ /www/wwwroot/nouser/application/commang/controller/Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000262s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `task` [ RunTime:0.000713s ]
+[ sql ] [ SQL ] SELECT * FROM `task` WHERE  (  1=1  and status=3 and worktime >= '1588348800' and worktime <= '1588435199' and worktype=1 ) ORDER BY istime desc,id desc lock in share mode [ RunTime:0.000375s ]
+[ error ] [2]file_put_contents(/www/wwwroot/nouser/runtime/cache/9f/d3820ed286969efd1cd3a38af6e926.php): failed to open stream: Permission denied[/www/wwwroot/nouser/thinkphp/library/think/cache/driver/File.php:159]
+---------------------------------------------------------------
+[ 2020-05-02T23:40:01+08:00 ] 39.100.2.104 GET /home.php/commang/Index/act_jisuan
+[ info ] b.8861.com/home.php/commang/Index/act_jisuan [运行时间：0.032990s][吞吐率：30.31req/s] [内存消耗：4,450.47kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'commang',
+    1 => 'Index',
+    2 => 'act_jisuan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'b.8861.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\commang\controller\Index->act_jisuan[ /www/wwwroot/nouser/application/commang/controller/Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000285s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `task` [ RunTime:0.000776s ]
+[ sql ] [ SQL ] SELECT * FROM `task` WHERE  (  1=1  and status=3 and worktime >= '1588348800' and worktime <= '1588435199' and worktype=1 ) ORDER BY istime desc,id desc lock in share mode [ RunTime:0.000439s ]
+[ error ] [2]file_put_contents(/www/wwwroot/nouser/runtime/cache/9f/d3820ed286969efd1cd3a38af6e926.php): failed to open stream: Permission denied[/www/wwwroot/nouser/thinkphp/library/think/cache/driver/File.php:159]
+---------------------------------------------------------------
+[ 2020-05-02T23:44:10+08:00 ] 153.35.244.34 GET /home.php/merchant/merchant/login.html
+[ info ] www.8861.com/home.php/merchant/merchant/login.html [运行时间：0.017237s][吞吐率：58.01req/s] [内存消耗：2,193.95kb] [文件加载：42]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\merchant\controller\Merchant->login[ /www/wwwroot/nouser/application/merchant/controller/Merchant.php ]
+[ info ] [ VIEW ] ./application/merchant/view/merchant/login.html [ array (
+  0 => 'module',
+  1 => 'control',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T23:44:10+08:00 ] 153.35.244.34 GET /home.php/merchant/merchant/Index-VerifyCode.png
+[ info ] www.8861.com/home.php/merchant/merchant/Index-VerifyCode.png [运行时间：0.016640s][吞吐率：60.10req/s] [内存消耗：2,200.55kb] [文件加载：43]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'Index-VerifyCode.png',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://www.8861.com/home.php/merchant/merchant/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/nouser/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T23:44:11+08:00 ] 153.35.244.34 POST /home.php/merchant/merchant/mydatetime.html
+[ info ] www.8861.com/home.php/merchant/merchant/mydatetime.html [运行时间：0.018128s][吞吐率：55.16req/s] [内存消耗：2,207.68kb] [文件加载：43]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'mydatetime',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/merchant/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '7',
+)
+[ info ] [ PARAM ] array (
+  'mytime' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T23:44:28+08:00 ] 153.35.244.34 POST /home.php/merchant/merchant/act_login.html
+[ info ] www.8861.com/home.php/merchant/merchant/act_login.html [运行时间：0.029655s][吞吐率：33.72req/s] [内存消耗：3,654.74kb] [文件加载：50]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'act_login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/merchant/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '83',
+)
+[ info ] [ PARAM ] array (
+  'user_name' => '17701425888',
+  'pass_word' => '123456789AB',
+  'mobile' => '17701425888',
+  'password' => '123456789AB',
+)
+[ info ] [ RUN ] app\merchant\controller\Merchant->act_login[ /www/wwwroot/nouser/application/merchant/controller/Merchant.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000288s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchant` [ RunTime:0.000714s ]
+[ sql ] [ SQL ] SELECT * FROM `merchant` WHERE  (  1=1 and mobile='17701425888' and password='6ae15fc00543b87d16a20cfaebd15b38' ) LIMIT 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] UPDATE `merchant`  SET `logintime`=1588434268  WHERE  (  1=1 and id=15 ) [ RunTime:0.002723s ]
+---------------------------------------------------------------
+[ 2020-05-02T23:44:29+08:00 ] 153.35.244.34 GET /home.php/merchant/merchant/index.html
+[ info ] www.8861.com/home.php/merchant/merchant/index.html [运行时间：0.042857s][吞吐率：23.33req/s] [内存消耗：4,605.93kb] [文件加载：57]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.8861.com/home.php/merchant/merchant/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\merchant\controller\Merchant->index[ /www/wwwroot/nouser/application/merchant/controller/Merchant.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./application/merchant/view/merchant/index.html [ array (
+  0 => 'find',
+  1 => 'type_name',
+  2 => 'status_name',
+  3 => 'hastask',
+  4 => 'finishtask',
+  5 => 'findTeacher',
+  6 => 'banner',
+  7 => 'articlearr',
+  8 => 'announcearr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000282s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchant` [ RunTime:0.000690s ]
+[ sql ] [ SQL ] SELECT * FROM `merchant` WHERE  (  1=1 and id='15' ) LIMIT 1 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  (  1=1 and id=23 ) LIMIT 1 [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000632s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and merchant_id=15 and status1 !=5 ) LIMIT 1 [ RunTime:0.000853s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and merchant_id=15 and status1=4 ) LIMIT 1 [ RunTime:0.000788s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  (  1=1  and category_id=1 ) ORDER BY id desc [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.000636s ]
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  (  1=1  and category_id=1 and flag=5 ) ORDER BY id desc [ RunTime:0.000261s ]
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  (  1=1  and category_id=1 and flag in(1,2,3,4) ) ORDER BY id desc [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  (  1=1  ) LIMIT 1 [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchantmenu` [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='merchant' and action='index' ) LIMIT 1 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `merchant` WHERE  (  1=1 and id='15' ) LIMIT 1 [ RunTime:0.000201s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and pid=0 ) ORDER BY sort asc,name asc [ RunTime:0.000164s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='merchant' and action='index' ) LIMIT 1 [ RunTime:0.000156s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=1 ) ORDER BY sort asc,name asc [ RunTime:0.000158s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='merchant' and action='index' ) LIMIT 1 [ RunTime:0.000134s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=2 ) ORDER BY sort asc,name asc [ RunTime:0.000140s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='merchant' and action='index' ) LIMIT 1 [ RunTime:0.000142s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=3 ) ORDER BY sort asc,name asc [ RunTime:0.000148s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='merchant' and action='index' ) LIMIT 1 [ RunTime:0.000129s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=4 ) ORDER BY sort asc,name asc [ RunTime:0.000147s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='merchant' and action='index' ) LIMIT 1 [ RunTime:0.000153s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=6 ) ORDER BY sort asc,name asc [ RunTime:0.000164s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='merchant' and action='index' ) LIMIT 1 [ RunTime:0.000134s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=5 ) ORDER BY sort asc,name asc [ RunTime:0.000152s ]
+---------------------------------------------------------------
+[ 2020-05-02T23:44:29+08:00 ] 153.35.244.34 POST /home.php/api/chat/search.html
+[ info ] www.8861.com/home.php/api/chat/search.html [运行时间：0.014924s][吞吐率：67.01req/s] [内存消耗：1,805.37kb] [文件加载：37]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'chat',
+    2 => 'search',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/merchant/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T23:44:35+08:00 ] 153.35.244.34 GET /home.php/merchant/task/add.html
+[ info ] www.8861.com/home.php/merchant/task/add.html [运行时间：0.036950s][吞吐率：27.06req/s] [内存消耗：4,139.15kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'task',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.8861.com/home.php/merchant/merchant/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\merchant\controller\Task->add[ /www/wwwroot/nouser/application/merchant/controller/Task.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./application/merchant/view/task/add.html [ array (
+  0 => 'shop_list',
+  1 => 'enum_cat_arr',
+  2 => 'enum_worktype_arr',
+  3 => 'enum_ishuabei_arr',
+  4 => 'enum_iscredit_arr',
+  5 => 'enum_isnot_arr',
+  6 => 'enum_istime_arr',
+  7 => 'enum_istag_arr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000294s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shop` [ RunTime:0.000625s ]
+[ sql ] [ SQL ] SELECT * FROM `shop` WHERE  (  1=1 and merchant_id=15 and status=2 ) ORDER BY id desc [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.000622s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  (  1=1  ) LIMIT 1 [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchantmenu` [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='task' and action='add' ) LIMIT 1 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchant` [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT * FROM `merchant` WHERE  (  1=1 and id='15' ) LIMIT 1 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and pid=0 ) ORDER BY sort asc,name asc [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='task' and action='add' ) LIMIT 1 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=1 ) ORDER BY sort asc,name asc [ RunTime:0.000197s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='task' and action='add' ) LIMIT 1 [ RunTime:0.000223s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=2 ) ORDER BY sort asc,name asc [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='task' and action='add' ) LIMIT 1 [ RunTime:0.000179s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=3 ) ORDER BY sort asc,name asc [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='task' and action='add' ) LIMIT 1 [ RunTime:0.000180s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=4 ) ORDER BY sort asc,name asc [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='task' and action='add' ) LIMIT 1 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=6 ) ORDER BY sort asc,name asc [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='task' and action='add' ) LIMIT 1 [ RunTime:0.000276s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=5 ) ORDER BY sort asc,name asc [ RunTime:0.000190s ]
+---------------------------------------------------------------
+[ 2020-05-02T23:44:35+08:00 ] 153.35.244.34 POST /home.php/api/chat/search.html
+[ info ] www.8861.com/home.php/api/chat/search.html [运行时间：0.014135s][吞吐率：70.75req/s] [内存消耗：1,805.04kb] [文件加载：37]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'chat',
+    2 => 'search',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/task/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T23:46:43+08:00 ] 153.35.244.34 POST /home.php/merchant/config/uploadify.html
+[ info ] www.8861.com/home.php/merchant/config/uploadify.html [运行时间：0.015240s][吞吐率：65.62req/s] [内存消耗：2,167.84kb] [文件加载：40]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'config',
+    2 => 'uploadify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/task/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryfGX1GVUJkJzCwzlN',
+  'content-length' => '470867',
+)
+[ info ] [ PARAM ] array (
+  'worktype' => '1',
+  'shop_id' => '34',
+  'cat' => '11',
+  'tags' => '',
+  'goodstitle' => '316 304不锈钢毛细管 不锈钢管 外径1 2 3 4 5 6 7 8 9mm壁厚0.5',
+  'goodsurl' => 'https://item.taobao.com/item.htm?spm=a2oq0.12575281.0.0.71581debeolo9u&ft=t&id=616212376652',
+  'mainimage' => '',
+  'isattr' => '2',
+  'ishuabei' => '1',
+  'iscredit' => '1',
+  'present' => '',
+  'istime' => '1',
+  'istag' => '1',
+  'tagkeyworks' => '',
+  'tagurl' => '',
+  'searchkeywords' => 
+  array (
+    0 => '',
+  ),
+  'price' => 
+  array (
+    0 => '',
+  ),
+  'priceremark' => 
+  array (
+    0 => '',
+  ),
+  'num' => 
+  array (
+    0 => '',
+  ),
+  'time8' => 
+  array (
+    0 => '0',
+  ),
+  'time9' => 
+  array (
+    0 => '0',
+  ),
+  'time10' => 
+  array (
+    0 => '0',
+  ),
+  'time11' => 
+  array (
+    0 => '0',
+  ),
+  'time12' => 
+  array (
+    0 => '0',
+  ),
+  'time13' => 
+  array (
+    0 => '0',
+  ),
+  'time14' => 
+  array (
+    0 => '0',
+  ),
+  'time15' => 
+  array (
+    0 => '0',
+  ),
+  'time16' => 
+  array (
+    0 => '0',
+  ),
+  'time17' => 
+  array (
+    0 => '0',
+  ),
+  'time18' => 
+  array (
+    0 => '0',
+  ),
+  'time19' => 
+  array (
+    0 => '0',
+  ),
+  'time20' => 
+  array (
+    0 => '0',
+  ),
+  'time21' => 
+  array (
+    0 => '0',
+  ),
+  'remark' => 
+  array (
+    0 => '',
+  ),
+)
+[ info ] [ RUN ] app\merchant\controller\Config->uploadify[ /www/wwwroot/nouser/application/merchant/controller/Config.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T23:47:06+08:00 ] 153.35.244.34 POST /home.php/merchant/task/act_without.html
+[ info ] www.8861.com/home.php/merchant/task/act_without.html [运行时间：0.024183s][吞吐率：41.35req/s] [内存消耗：3,545.45kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'task',
+    2 => 'act_without',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/task/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '13',
+)
+[ info ] [ PARAM ] array (
+  'price' => '30',
+  'num' => '',
+)
+[ info ] [ RUN ] app\merchant\controller\Task->act_without[ /www/wwwroot/nouser/application/merchant/controller/Task.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000308s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchantwithout` [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 and start<=30 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000334s ]
+---------------------------------------------------------------
+[ 2020-05-02T23:47:09+08:00 ] 153.35.244.34 POST /home.php/merchant/task/act_without.html
+[ info ] www.8861.com/home.php/merchant/task/act_without.html [运行时间：0.024059s][吞吐率：41.56req/s] [内存消耗：3,545.42kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'task',
+    2 => 'act_without',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/task/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '14',
+)
+[ info ] [ PARAM ] array (
+  'price' => '30',
+  'num' => '1',
+)
+[ info ] [ RUN ] app\merchant\controller\Task->act_without[ /www/wwwroot/nouser/application/merchant/controller/Task.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000298s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchantwithout` [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 and start<=30 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000364s ]
+---------------------------------------------------------------
+[ 2020-05-02T23:47:25+08:00 ] 153.35.244.34 POST /home.php/merchant/task/act_without.html
+[ info ] www.8861.com/home.php/merchant/task/act_without.html [运行时间：0.024804s][吞吐率：40.32req/s] [内存消耗：3,545.45kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'task',
+    2 => 'act_without',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/task/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '13',
+)
+[ info ] [ PARAM ] array (
+  'price' => '90',
+  'num' => '',
+)
+[ info ] [ RUN ] app\merchant\controller\Task->act_without[ /www/wwwroot/nouser/application/merchant/controller/Task.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000263s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchantwithout` [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 and start<=90 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000322s ]
+---------------------------------------------------------------
+[ 2020-05-02T23:47:26+08:00 ] 153.35.244.34 POST /home.php/merchant/task/act_without.html
+[ info ] www.8861.com/home.php/merchant/task/act_without.html [运行时间：0.023723s][吞吐率：42.15req/s] [内存消耗：3,545.45kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'task',
+    2 => 'act_without',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/task/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '13',
+)
+[ info ] [ PARAM ] array (
+  'price' => '90',
+  'num' => '',
+)
+[ info ] [ RUN ] app\merchant\controller\Task->act_without[ /www/wwwroot/nouser/application/merchant/controller/Task.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000270s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchantwithout` [ RunTime:0.000548s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 and start<=90 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000353s ]
+---------------------------------------------------------------
+[ 2020-05-02T23:47:29+08:00 ] 153.35.244.34 POST /home.php/merchant/task/act_without.html
+[ info ] www.8861.com/home.php/merchant/task/act_without.html [运行时间：0.023540s][吞吐率：42.48req/s] [内存消耗：3,545.42kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'task',
+    2 => 'act_without',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/task/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '14',
+)
+[ info ] [ PARAM ] array (
+  'price' => '90',
+  'num' => '1',
+)
+[ info ] [ RUN ] app\merchant\controller\Task->act_without[ /www/wwwroot/nouser/application/merchant/controller/Task.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000300s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchantwithout` [ RunTime:0.000596s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 and start<=90 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000353s ]
+---------------------------------------------------------------
+[ 2020-05-02T23:47:41+08:00 ] 153.35.244.34 POST /home.php/merchant/task/act_without.html
+[ info ] www.8861.com/home.php/merchant/task/act_without.html [运行时间：0.024099s][吞吐率：41.50req/s] [内存消耗：3,545.45kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'task',
+    2 => 'act_without',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/task/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '13',
+)
+[ info ] [ PARAM ] array (
+  'price' => '80',
+  'num' => '',
+)
+[ info ] [ RUN ] app\merchant\controller\Task->act_without[ /www/wwwroot/nouser/application/merchant/controller/Task.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000238s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchantwithout` [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 and start<=80 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000338s ]
+---------------------------------------------------------------
+[ 2020-05-02T23:47:44+08:00 ] 153.35.244.34 POST /home.php/merchant/task/act_without.html
+[ info ] www.8861.com/home.php/merchant/task/act_without.html [运行时间：0.024317s][吞吐率：41.12req/s] [内存消耗：3,545.42kb] [文件加载：48]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'task',
+    2 => 'act_without',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/task/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '14',
+)
+[ info ] [ PARAM ] array (
+  'price' => '80',
+  'num' => '1',
+)
+[ info ] [ RUN ] app\merchant\controller\Task->act_without[ /www/wwwroot/nouser/application/merchant/controller/Task.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000293s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchantwithout` [ RunTime:0.001211s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 and start<=80 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000346s ]
+---------------------------------------------------------------
+[ 2020-05-02T23:47:47+08:00 ] 153.35.244.34 POST /home.php/merchant/task/act_price_html.html
+[ info ] www.8861.com/home.php/merchant/task/act_price_html.html [运行时间：0.030194s][吞吐率：33.12req/s] [内存消耗：3,840.48kb] [文件加载：50]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'task',
+    2 => 'act_price_html',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/task/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '1623',
+)
+[ info ] [ PARAM ] array (
+  'worktype' => '1',
+  'shop_id' => '34',
+  'cat' => '11',
+  'tags' => '04不锈钢毛细管 不锈钢管',
+  'goodstitle' => '316 304不锈钢毛细管 不锈钢管 外径1 2 3 4 5 6 7 8 9mm壁厚0.5',
+  'goodsurl' => 'https://item.taobao.com/item.htm?spm=a2oq0.12575281.0.0.71581debeolo9u&ft=t&id=616212376652',
+  'mainimage' => '/uploads/20200502/292c6e0d73750641ac0b4bb33e05975e.jpg',
+  'isattr' => '2',
+  'ishuabei' => '1',
+  'iscredit' => '1',
+  'present' => '',
+  'istime' => '2',
+  'istag' => '1',
+  'tagkeyworks' => '',
+  'tagurl' => '',
+  'searchkeywords' => 
+  array (
+    0 => '不锈钢毛细管 不锈钢管',
+    1 => '304不锈钢毛细管',
+    2 => '304不锈钢管',
+  ),
+  'price' => 
+  array (
+    0 => '30',
+    1 => '90',
+    2 => '80',
+  ),
+  'priceremark' => 
+  array (
+    0 => '',
+    1 => '',
+    2 => '',
+  ),
+  'num' => 
+  array (
+    0 => '1',
+    1 => '1',
+    2 => '1',
+  ),
+  'time8' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time9' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time10' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time11' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time12' => 
+  array (
+    0 => '1',
+    1 => '0',
+    2 => '0',
+  ),
+  'time13' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time14' => 
+  array (
+    0 => '0',
+    1 => '1',
+    2 => '0',
+  ),
+  'time15' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time16' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time17' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time18' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '1',
+  ),
+  'time19' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time20' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time21' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'remark' => 
+  array (
+    0 => '',
+    1 => '',
+    2 => '',
+  ),
+)
+[ info ] [ RUN ] app\merchant\controller\Task->act_price_html[ /www/wwwroot/nouser/application/merchant/controller/Task.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000320s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchantwithout` [ RunTime:0.000736s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 ) ORDER BY end desc LIMIT 1 [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `within` [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SELECT * FROM `within` WHERE  (  1=1 ) ORDER BY end desc LIMIT 1 [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 and start<=30 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 and start<=90 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 and start<=80 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000305s ]
+---------------------------------------------------------------
+[ 2020-05-02T23:47:49+08:00 ] 153.35.244.34 POST /home.php/merchant/task/act_add.html
+[ info ] www.8861.com/home.php/merchant/task/act_add.html [运行时间：0.055825s][吞吐率：17.91req/s] [内存消耗：5,329.30kb] [文件加载：58]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'task',
+    2 => 'act_add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/task/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '1623',
+)
+[ info ] [ PARAM ] array (
+  'worktype' => '1',
+  'shop_id' => '34',
+  'cat' => '11',
+  'tags' => '04不锈钢毛细管 不锈钢管',
+  'goodstitle' => '316 304不锈钢毛细管 不锈钢管 外径1 2 3 4 5 6 7 8 9mm壁厚0.5',
+  'goodsurl' => 'https://item.taobao.com/item.htm?spm=a2oq0.12575281.0.0.71581debeolo9u&ft=t&id=616212376652',
+  'mainimage' => '/uploads/20200502/292c6e0d73750641ac0b4bb33e05975e.jpg',
+  'isattr' => '2',
+  'ishuabei' => '1',
+  'iscredit' => '1',
+  'present' => '',
+  'istime' => '2',
+  'istag' => '1',
+  'tagkeyworks' => '',
+  'tagurl' => '',
+  'searchkeywords' => 
+  array (
+    0 => '不锈钢毛细管 不锈钢管',
+    1 => '304不锈钢毛细管',
+    2 => '304不锈钢管',
+  ),
+  'price' => 
+  array (
+    0 => '30',
+    1 => '90',
+    2 => '80',
+  ),
+  'priceremark' => 
+  array (
+    0 => '',
+    1 => '',
+    2 => '',
+  ),
+  'num' => 
+  array (
+    0 => '1',
+    1 => '1',
+    2 => '1',
+  ),
+  'time8' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time9' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time10' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time11' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time12' => 
+  array (
+    0 => '1',
+    1 => '0',
+    2 => '0',
+  ),
+  'time13' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time14' => 
+  array (
+    0 => '0',
+    1 => '1',
+    2 => '0',
+  ),
+  'time15' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time16' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time17' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time18' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '1',
+  ),
+  'time19' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time20' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'time21' => 
+  array (
+    0 => '0',
+    1 => '0',
+    2 => '0',
+  ),
+  'remark' => 
+  array (
+    0 => '',
+    1 => '',
+    2 => '',
+  ),
+)
+[ info ] [ RUN ] app\merchant\controller\Task->act_add[ /www/wwwroot/nouser/application/merchant/controller/Task.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000289s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchant` [ RunTime:0.001355s ]
+[ sql ] [ SQL ] SELECT * FROM `merchant` WHERE  (  1=1 and id=15 ) LIMIT 1 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `task` [ RunTime:0.000667s ]
+[ sql ] [ SQL ] SELECT * FROM `task` WHERE  (  1=1 and merchant_id=15 and intime>=1588348800 and intime<=1588435199 ) ORDER BY id desc [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000723s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1 and task_id in(44) ) LIMIT 1 [ RunTime:0.000781s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shop` [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SELECT * FROM `shop` WHERE  (  1=1 and id=34 ) ORDER BY id asc LIMIT 1 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchantwithout` [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 ) ORDER BY end desc LIMIT 1 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `within` [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT * FROM `within` WHERE  (  1=1 ) ORDER BY end desc LIMIT 1 [ RunTime:0.000197s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `task` WHERE  (  1=1 and intime>=1588348800 and intime<=1588435199 ) LIMIT 1 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] INSERT INTO `task` (`worktime` , `merchant_id` , `shop_id` , `shop_name` , `worktype` , `cat` , `tags` , `goodstitle` , `goodsurl` , `mainimage` , `ishuabei` , `iscredit` , `present` , `isattr` , `istime` , `tasksn` , `status` , `intime` , `uptime`) VALUES (1588434469 , 15 , 34 , '杰泰金属科技有限公司' , 2 , 11 , '04不锈钢毛细管 不锈钢管' , '316 304不锈钢毛细管 不锈钢管 外径1 2 3 4 5 6 7 8 9mm壁厚0.5' , 'https://item.taobao.com/item.htm?spm=a2oq0.12575281.0.0.71581debeolo9u&ft=t&id=616212376652' , '/uploads/20200502/292c6e0d73750641ac0b4bb33e05975e.jpg' , 1 , 1 , '' , 2 , 2 , '2020050200000004' , 1 , 1588434469 , 1588434469) [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 and start<=30 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taskdetail` [ RunTime:0.000608s ]
+[ sql ] [ SQL ] INSERT INTO `taskdetail` (`task_id` , `searchkeywords` , `price` , `priceremark` , `num` , `without_price` , `istalk` , `isparity` , `iscart` , `iscollect` , `isfocus` , `isbrowseshop` , `isbrowseinfo` , `remark` , `time8` , `time9` , `time10` , `time11` , `time12` , `time13` , `time14` , `time15` , `time16` , `time17` , `time18` , `time19` , `time20` , `time21` , `intime` , `uptime`) VALUES (46 , '不锈钢毛细管 不锈钢管' , 30 , '' , 1 , 12 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , '' , 0 , 0 , 0 , 0 , 1 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 1588434469 , 1588434469) [ RunTime:0.000237s ]
+[ sql ] [ SQL ] SELECT * FROM `within` WHERE  (  1=1 and start<=30 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`merchant_id` , `shop_id` , `shop_name` , `task_id` , `taskdetail_id` , `goodstitle` , `mainimage` , `verifycode` , `price` , `priceremark` , `without_price` , `within_price` , `type` , `status1` , `worktype` , `worktime` , `remark` , `intime` , `uptime`) VALUES (15 , 34 , '杰泰金属科技有限公司' , 46 , 212 , '316 304不锈钢毛细管 不锈钢管 外径1 2 3 4 5 6 7 8 9mm壁厚0.5' , '/uploads/20200502/292c6e0d73750641ac0b4bb33e05975e.jpg' , '384143' , 30 , '' , 12 , 4 , 1 , 1 , 2 , 1588434469 , '' , 1588434469 , 1588434469) [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 and start<=90 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000262s ]
+[ sql ] [ SQL ] INSERT INTO `taskdetail` (`task_id` , `searchkeywords` , `price` , `priceremark` , `num` , `without_price` , `istalk` , `isparity` , `iscart` , `iscollect` , `isfocus` , `isbrowseshop` , `isbrowseinfo` , `remark` , `time8` , `time9` , `time10` , `time11` , `time12` , `time13` , `time14` , `time15` , `time16` , `time17` , `time18` , `time19` , `time20` , `time21` , `intime` , `uptime`) VALUES (46 , '304不锈钢毛细管' , 90 , '' , 1 , 12 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , '' , 0 , 0 , 0 , 0 , 0 , 0 , 1 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 1588434469 , 1588434469) [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SELECT * FROM `within` WHERE  (  1=1 and start<=90 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`merchant_id` , `shop_id` , `shop_name` , `task_id` , `taskdetail_id` , `goodstitle` , `mainimage` , `verifycode` , `price` , `priceremark` , `without_price` , `within_price` , `type` , `status1` , `worktype` , `worktime` , `remark` , `intime` , `uptime`) VALUES (15 , 34 , '杰泰金属科技有限公司' , 46 , 213 , '316 304不锈钢毛细管 不锈钢管 外径1 2 3 4 5 6 7 8 9mm壁厚0.5' , '/uploads/20200502/292c6e0d73750641ac0b4bb33e05975e.jpg' , '229148' , 90 , '' , 12 , 4 , 1 , 1 , 2 , 1588434469 , '' , 1588434469 , 1588434469) [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantwithout` WHERE  (  1=1 and merchant_id=15 and start<=80 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000261s ]
+[ sql ] [ SQL ] INSERT INTO `taskdetail` (`task_id` , `searchkeywords` , `price` , `priceremark` , `num` , `without_price` , `istalk` , `isparity` , `iscart` , `iscollect` , `isfocus` , `isbrowseshop` , `isbrowseinfo` , `remark` , `time8` , `time9` , `time10` , `time11` , `time12` , `time13` , `time14` , `time15` , `time16` , `time17` , `time18` , `time19` , `time20` , `time21` , `intime` , `uptime`) VALUES (46 , '304不锈钢管' , 80 , '' , 1 , 12 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , '' , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 1 , 0 , 0 , 0 , 1588434469 , 1588434469) [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SELECT * FROM `within` WHERE  (  1=1 and start<=80 ) ORDER BY price desc LIMIT 1 [ RunTime:0.000169s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`merchant_id` , `shop_id` , `shop_name` , `task_id` , `taskdetail_id` , `goodstitle` , `mainimage` , `verifycode` , `price` , `priceremark` , `without_price` , `within_price` , `type` , `status1` , `worktype` , `worktime` , `remark` , `intime` , `uptime`) VALUES (15 , 34 , '杰泰金属科技有限公司' , 46 , 214 , '316 304不锈钢毛细管 不锈钢管 外径1 2 3 4 5 6 7 8 9mm壁厚0.5' , '/uploads/20200502/292c6e0d73750641ac0b4bb33e05975e.jpg' , '329494' , 80 , '' , 12 , 4 , 1 , 1 , 2 , 1588434469 , '' , 1588434469 , 1588434469) [ RunTime:0.000212s ]
+[ sql ] [ SQL ] UPDATE `task`  SET `worktime`=1588434469,`merchant_id`=15,`shop_id`=34,`shop_name`='杰泰金属科技有限公司',`worktype`=2,`cat`=11,`tags`='04不锈钢毛细管 不锈钢管',`goodstitle`='316 304不锈钢毛细管 不锈钢管 外径1 2 3 4 5 6 7 8 9mm壁厚0.5',`goodsurl`='https://item.taobao.com/item.htm?spm=a2oq0.12575281.0.0.71581debeolo9u&ft=t&id=616212376652',`mainimage`='/uploads/20200502/292c6e0d73750641ac0b4bb33e05975e.jpg',`ishuabei`=1,`iscredit`=1,`present`='',`isattr`=2,`istime`=2,`tasksn`='2020050200000004',`status`=1,`intime`=1588434469,`uptime`=1588434469,`money`=200,`num`=3,`without_money`=36,`total_money`=236  WHERE  (  1=1 and id=46 ) [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  (  1=1  ) LIMIT 1 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `task` WHERE  (  1=1 and id=46 ) ORDER BY id desc LIMIT 1 [ RunTime:0.000242s ]
+[ sql ] [ SQL ] SELECT * FROM `merchant` WHERE  (  1=1 and id=15 ) LIMIT 1 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] UPDATE `merchant`  SET `money`=73.9,`freeze_money`=236  WHERE  (  1=1 and id=15 ) [ RunTime:0.000170s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchantmlogs` [ RunTime:0.000484s ]
+[ sql ] [ SQL ] INSERT INTO `merchantmlogs` (`algorithm` , `type` , `merchant_id` , `shop_id` , `startmoney` , `money` , `endmoney` , `order_code` , `tradeno` , `remark` , `intime` , `uptime`) VALUES (2 , 5 , 15 , 34 , 309.9 , 236 , 73.9 , '2020050200000004' , '' , '任务Id：2020050200000004' , 1588434469 , 1588434469) [ RunTime:0.000175s ]
+[ sql ] [ SQL ] UPDATE `task`  SET `status`=2,`paytime`=1588434469,`uptime`=1588434469  WHERE  (  1=1 and id=46 ) [ RunTime:0.000171s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  (  1=1  ) LIMIT 1 [ RunTime:0.000216s ]
+---------------------------------------------------------------
+[ 2020-05-02T23:47:51+08:00 ] 153.35.244.34 GET /home.php/merchant/merchant/index.html
+[ info ] www.8861.com/home.php/merchant/merchant/index.html [运行时间：0.044406s][吞吐率：22.52req/s] [内存消耗：4,605.92kb] [文件加载：57]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.8861.com/home.php/merchant/merchant/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\merchant\controller\Merchant->index[ /www/wwwroot/nouser/application/merchant/controller/Merchant.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./application/merchant/view/merchant/index.html [ array (
+  0 => 'find',
+  1 => 'type_name',
+  2 => 'status_name',
+  3 => 'hastask',
+  4 => 'finishtask',
+  5 => 'findTeacher',
+  6 => 'banner',
+  7 => 'articlearr',
+  8 => 'announcearr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000295s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchant` [ RunTime:0.000726s ]
+[ sql ] [ SQL ] SELECT * FROM `merchant` WHERE  (  1=1 and id='15' ) LIMIT 1 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  (  1=1 and id=23 ) LIMIT 1 [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000699s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and merchant_id=15 and status1 !=5 ) LIMIT 1 [ RunTime:0.001091s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order` WHERE  (  1=1  and merchant_id=15 and status1=4 ) LIMIT 1 [ RunTime:0.001069s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  (  1=1  and category_id=1 ) ORDER BY id desc [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  (  1=1  and category_id=1 and flag=5 ) ORDER BY id desc [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  (  1=1  and category_id=1 and flag in(1,2,3,4) ) ORDER BY id desc [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  (  1=1  ) LIMIT 1 [ RunTime:0.000211s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchantmenu` [ RunTime:0.000496s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='merchant' and action='index' ) LIMIT 1 [ RunTime:0.000176s ]
+[ sql ] [ SQL ] SELECT * FROM `merchant` WHERE  (  1=1 and id='15' ) LIMIT 1 [ RunTime:0.000181s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and pid=0 ) ORDER BY sort asc,name asc [ RunTime:0.000179s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='merchant' and action='index' ) LIMIT 1 [ RunTime:0.000176s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=1 ) ORDER BY sort asc,name asc [ RunTime:0.000164s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='merchant' and action='index' ) LIMIT 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=2 ) ORDER BY sort asc,name asc [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='merchant' and action='index' ) LIMIT 1 [ RunTime:0.000158s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=3 ) ORDER BY sort asc,name asc [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='merchant' and action='index' ) LIMIT 1 [ RunTime:0.000146s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=4 ) ORDER BY sort asc,name asc [ RunTime:0.000168s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='merchant' and action='index' ) LIMIT 1 [ RunTime:0.000143s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=6 ) ORDER BY sort asc,name asc [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and control='merchant' and action='index' ) LIMIT 1 [ RunTime:0.000145s ]
+[ sql ] [ SQL ] SELECT * FROM `merchantmenu` WHERE  (  1=1 and isshow=1 and pid=5 ) ORDER BY sort asc,name asc [ RunTime:0.000144s ]
+---------------------------------------------------------------
+[ 2020-05-02T23:47:51+08:00 ] 153.35.244.34 POST /home.php/api/chat/search.html
+[ info ] www.8861.com/home.php/api/chat/search.html [运行时间：0.015128s][吞吐率：66.10req/s] [内存消耗：1,805.37kb] [文件加载：37]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'chat',
+    2 => 'search',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.8861.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 QBCore/4.0.1295.400 QQBrowser/9.0.2524.400 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2875.116 Safari/537.36 NetType/WIFI MicroMessenger/7.0.5 WindowsWechat',
+  'referer' => 'http://www.8861.com/home.php/merchant/merchant/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.5;q=0.4',
+  'cookie' => 'PHPSESSID=8t9p2qovti735eiehqiqe1e3i5',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T23:50:01+08:00 ] 39.100.2.104 GET /home.php/commang/Index/act_jisuan
+[ info ] b.8861.com/home.php/commang/Index/act_jisuan [运行时间：0.030324s][吞吐率：32.98req/s] [内存消耗：4,450.47kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'commang',
+    1 => 'Index',
+    2 => 'act_jisuan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'b.8861.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\commang\controller\Index->act_jisuan[ /www/wwwroot/nouser/application/commang/controller/Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000362s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `task` [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SELECT * FROM `task` WHERE  (  1=1  and status=3 and worktime >= '1588348800' and worktime <= '1588435199' and worktype=1 ) ORDER BY istime desc,id desc lock in share mode [ RunTime:0.000388s ]
+[ error ] [2]file_put_contents(/www/wwwroot/nouser/runtime/cache/9f/d3820ed286969efd1cd3a38af6e926.php): failed to open stream: Permission denied[/www/wwwroot/nouser/thinkphp/library/think/cache/driver/File.php:159]
+---------------------------------------------------------------
+[ 2020-05-02T23:50:01+08:00 ] 39.100.2.104 GET /home.php/commang/Index/index
+[ info ] b.8861.com/home.php/commang/Index/index [运行时间：0.034297s][吞吐率：29.16req/s] [内存消耗：3,907.41kb] [文件加载：51]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'commang',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'b.8861.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\commang\controller\Index->index[ /www/wwwroot/nouser/application/commang/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000226s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.000894s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`status` FROM `order` `a` INNER JOIN `task` `c` ON `a`.`task_id`=`c`.`id` WHERE  (  a.type in (1,2) and a.status1 in(1,2,3) and a.status2 = 0 and c.status in(1,2,3) and c.worktype = 1 and a.worktime >= '1588348800' and a.worktime <= '1588435199' ) ORDER BY a.id desc [ RunTime:0.005246s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `task` [ RunTime:0.000809s ]
+[ sql ] [ SQL ] SELECT * FROM `task` WHERE  (  1=1  and status =3 and worktype = 1 and worktime >= '1588348800' and worktime <= '1588435199' ) ORDER BY id desc [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchant` [ RunTime:0.000644s ]
+[ sql ] [ SQL ] SELECT * FROM `merchant` WHERE  (  1=1 and loans_money >0 ) ORDER BY id desc [ RunTime:0.000304s ]
+---------------------------------------------------------------
+[ 2020-05-02T23:51:20+08:00 ] 61.151.178.166 GET /home.php/merchant/task/add.html
+[ info ] www.8861.com/home.php/merchant/task/add.html [运行时间：0.015757s][吞吐率：63.46req/s] [内存消耗：2,210.33kb] [文件加载：43]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'task',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 4.4.4; Coolpad Y82-520 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 MicroMessenger/6.5.4.1000 NetType/4G Language/zh_CN',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/nouser/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T23:52:17+08:00 ] 61.129.6.203 GET /home.php/merchant/merchant/index.html
+[ info ] www.8861.com/home.php/merchant/merchant/index.html [运行时间：0.015790s][吞吐率：63.33req/s] [内存消耗：2,199.85kb] [文件加载：43]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 4.4.4; HUAWEI ALE-CL00 Build/HuaweiALE-CL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/53.0.2785.49 Mobile MQQBrowser/6.2 TBS/043024 Safari/537.36 MicroMessenger/6.5.4.1000 NetType/4G Language/zh_CN',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/nouser/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T23:55:06+08:00 ] 61.151.207.205 GET /home.php/merchant/merchant/login.html
+[ info ] www.8861.com/home.php/merchant/merchant/login.html [运行时间：0.023997s][吞吐率：41.67req/s] [内存消耗：2,192.57kb] [文件加载：42]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'merchant',
+    1 => 'merchant',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 MicroMessenger/6.5.2.501 NetType/WIFI WindowsWechat QBCore/3.43.27.400 QQBrowser/9.0.2524.400',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'host' => 'www.8861.com',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\merchant\controller\Merchant->login[ /www/wwwroot/nouser/application/merchant/controller/Merchant.php ]
+[ info ] [ VIEW ] ./application/merchant/view/merchant/login.html [ array (
+  0 => 'module',
+  1 => 'control',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-02T23:58:01+08:00 ] 39.100.2.104 GET /home.php/commang/Index/refund
+[ info ] b.8861.com/home.php/commang/Index/refund [运行时间：0.024966s][吞吐率：40.05req/s] [内存消耗：3,649.45kb] [文件加载：50]
+[ info ] [ LANG ] /www/wwwroot/nouser/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'commang',
+    1 => 'Index',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'curl/7.29.0',
+  'host' => 'b.8861.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\commang\controller\Index->refund[ /www/wwwroot/nouser/application/commang/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000347s ] mysql:host=127.0.0.1;port=3306;dbname=nouser;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `merchant` [ RunTime:0.000729s ]
+[ sql ] [ SQL ] SELECT * FROM `merchant` WHERE  (  1=1 and loans_money >0 ) ORDER BY id desc [ RunTime:0.000325s ]

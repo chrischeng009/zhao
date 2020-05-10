@@ -122,7 +122,7 @@ class Merchant extends Controller
         $data['password'] = md5(trim($_POST['password']));
         $data['weixin'] = postt('weixin');
         $data['aid'] = postt('aid');
-        $data['status'] = MerchantModel::enumStatus1;
+        $data['status'] = MerchantModel::enumStatus2;
         $data['type'] = MerchantModel::enumType1;
         $data['intime'] = time();
         $data['uptime'] = time();
@@ -134,6 +134,7 @@ class Merchant extends Controller
         }*/
         $data['worktime'] = $find_config['worktime'];
         $data['worknum'] = $find_config['worknum'];
+        $data['comrate']=0.20;
         
 
         $result = MerchantModel::do_add($data);

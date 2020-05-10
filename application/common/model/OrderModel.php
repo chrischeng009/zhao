@@ -1008,6 +1008,10 @@ class OrderModel extends Model{
                     $redis = new Redis(config('cache.redis'));
                     Cache::set('adminid2','666',60);
                     $info = $redis->lrange('orderlist', 0, -1);
+                    if (empty($info)) {
+                        echo "领取线程池没有任何其他单子";
+                        exit;
+                    }
                     $num = 0;
                     $suc = 0;
                     $once = 8;
